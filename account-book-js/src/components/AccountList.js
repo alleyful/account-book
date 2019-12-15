@@ -8,41 +8,48 @@ const listData = {
     {
       id: 1,
       title: "식비",
-      dec: 5000,
-      total: 95000
+      dec: 5000
     },
     {
       id: 2,
       title: "교통비",
-      dec: 2000,
-      total: 93000
+      dec: 2000
     },
     {
       id: 3,
       title: "용돈",
-      inc: 10000,
-      total: 103000
+      inc: 10000
     }
   ]
 };
 
-const AccountListBlock = styled.div``;
+const AccountListBlock = styled.div`
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.8em;
+
+  & > h2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+`;
 
 function AccountList() {
   return (
-    <>
+    <AccountListBlock>
       <h2>
         <span>내용</span>
-        <span>입금</span>
-        <span>지출</span>
-        <span>잔액</span>
+        <span>금액</span>
       </h2>
       <ul>
         {listData["list"].map(list => (
           <AccountItem list={list} />
         ))}
       </ul>
-    </>
+    </AccountListBlock>
   );
 }
 

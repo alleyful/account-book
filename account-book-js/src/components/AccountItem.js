@@ -7,14 +7,26 @@ const AccountItemBlock = styled.li`
   justify-content: space-between;
 `;
 
+const AccountItemDecrease = styled.span`
+  color: #ff366a;
+`;
+
+const AccountItemIncrease = styled.span`
+  color: #22dab3;
+`;
+
 function AccountItem({ list }) {
-  const { id, dec, inc, title, total } = list;
+  const { id, dec, inc, title } = list;
+  const isDecrease = dec && !inc;
 
   return (
     <AccountItemBlock key={id}>
       <span>{title}</span>
-      {dec ? <span>{dec}</span> : <span>{inc}</span>}
-      <span>{total}</span>
+      {isDecrease ? (
+        <AccountItemDecrease>{dec}</AccountItemDecrease>
+      ) : (
+        <AccountItemIncrease>{inc}</AccountItemIncrease>
+      )}
     </AccountItemBlock>
   );
 }
