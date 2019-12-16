@@ -4,6 +4,7 @@ import reset from "styled-reset";
 import AccountWrap from "./components/AccountWrap";
 import AccountHead from "./components/AccountHead";
 import AccountList from "./components/AccountList";
+import AccountFooter from "./components/AccountFooter";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -29,6 +30,7 @@ function App() {
       <AccountWrap>
         <AccountHead />
         <AccountList />
+        <AccountFooter />
       </AccountWrap>
     </>
   );
