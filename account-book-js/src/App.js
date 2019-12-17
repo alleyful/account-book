@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 	}
 	body{
-		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif!important;
+		font-family: -apple-system, Helvetica, Arial, "hiragino kaku gothic pro", meiryo, "Microsoft YaHei", "ms pgothic", "Apple SD Gothic Neo", "Nanum Gothic", "Malgun Gothic", sans-serif;
 		font-size: 12px;
 		background-color: #fff;
 		padding-top: 50px;
